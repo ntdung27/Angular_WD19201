@@ -15,7 +15,9 @@
       <td>{{ product.name }}</td>
       <td>{{ product.price }}</td>
       <td>{{ product.description }}</td>
-      <td></td>
+      <td>
+        <button (click)="removeItem(product.id)">Xoá</button>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -19,11 +19,15 @@ export class AppComponent {
       this.products = data;
     })
   }
+  removeItem(id:any){
+    if(confirm('Are you sure?')){
+      this.http.delete('http://localhost:3000/products/'+id).subscribe((data) => {
+        this.products = this.products.filter((item:any) => item.id != id)
+      })
+    }
+  }
 
-  // for(let product of products){
-  //   console.log(product);
-    
-  // }
+
   // constructor(private productService: ProductService){}
   // ngOnInit(){
   //   this.productService.getProducts().subscribe((data)=>{
@@ -31,3 +35,12 @@ export class AppComponent {
   //   })
   // }
 }
+
+/*
+  Xoá
+  B1: tạo button xoá
+  B2: bắt sự kiện click cho button xoá
+  B3: khi bắt sự kiện click sẽ gọi ra hàm để thực hiện chức năng
+  B4: call api và xoá
+  B5: refresh data
+*/ 
