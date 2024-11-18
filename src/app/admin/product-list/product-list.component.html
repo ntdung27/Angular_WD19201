@@ -16,6 +16,9 @@
       <td>{{ product.price }}</td>
       <td>{{ product.description }}</td>
       <td>
+        <a href="admin/products/{{ product.id }}/edit"
+          ><button>Cập nhật</button></a
+        >
         <button (click)="removeItem(product.id)">Xoá</button>
       </td>
     </tr>

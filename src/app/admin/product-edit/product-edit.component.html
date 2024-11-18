@@ -1,1 +1,24 @@
-<p>product-edit works!</p>
+<h1>Cập nhật sản phẩm</h1>
+
+<form [formGroup]="form" (submit)="onSubmit()">
+  <div>
+    <label for="">Tên sản phẩm</label>
+    <input type="text" placeholder="Nhập tên sản phẩm" formControlName="name" />
+  </div>
+  <div>
+    <label for="">Giá sản phẩm</label>
+    <input
+      type="text"
+      placeholder="Nhập giá sản phẩm"
+      formControlName="price"
+    />
+  </div>
+  <div>
+    <label for="">Mô tả sản phẩm</label>
+    <textarea
+      placeholder="Nhập mô tả sản phẩm"
+      formControlName="description"
+    ></textarea>
+  </div>
+  <button>Thêm mới</button>
+</form>

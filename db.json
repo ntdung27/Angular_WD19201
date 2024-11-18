@@ -1,16 +1,28 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Product 1",
-      "price": 100,
-      "description": "Desc 1"
+      "name": "Product 1 update",
+      "price": "10000000",
+      "description": "Desc 1 update",
+      "id": "1"
     },
     {
       "id": "2",
       "name": "Product 2",
       "price": 200,
       "description": "Desc 2"
+    },
+    {
+      "id": "9c84",
+      "name": "abcd",
+      "price": "1000",
+      "description": "abcd"
+    },
+    {
+      "id": "70fd",
+      "name": "new product",
+      "price": "100",
+      "description": "new"
     }
   ]
 }
