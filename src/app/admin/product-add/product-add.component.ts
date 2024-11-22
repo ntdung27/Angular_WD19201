@@ -1,12 +1,13 @@
+import { NgIf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-add',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: './product-add.component.html',
   styleUrl: './product-add.component.css'
 })
@@ -15,7 +16,7 @@ export class ProductAddComponent {
   constructor(private http:HttpClient, private router:Router){}
   ngOnInit(){
     this.form= new FormGroup({
-      name: new FormControl(''),
+      name: new FormControl('',[Validators.required,Validators.minLength(5)]),
       price: new FormControl(0),
       description: new FormControl('')
     });

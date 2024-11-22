@@ -4,6 +4,17 @@
   <div>
     <label for="">Tên sản phẩm</label>
     <input type="text" placeholder="Nhập tên sản phẩm" formControlName="name" />
+    <div
+      *ngIf="
+        (form.get('name').invalid && form.get('name').dirty) ||
+        form.get('name').touched
+      "
+    >
+      <div *ngIf="form.get('name').errors.required">Đây là trường bắt buộc</div>
+      <div *ngIf="form.get('name').errors.minlength">
+        Tên sản phẩm phải lớn hơn 5 ký tự
+      </div>
+    </div>
   </div>
   <div>
     <label for="">Giá sản phẩm</label>
@@ -20,5 +31,5 @@
       formControlName="description"
     ></textarea>
   </div>
-  <button>Thêm mới</button>
+  <button htmlType="submit" [disabled]="form.invalid">Thêm mới</button>
 </form>

@@ -23,6 +23,12 @@
       "name": "new product",
       "price": "100",
       "description": "new"
+    },
+    {
+      "id": "18e4",
+      "name": "abcd",
+      "price": 0,
+      "description": ""
     }
   ]
 }
