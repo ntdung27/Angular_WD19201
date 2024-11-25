@@ -1,0 +1,22 @@
+<h1>Đăng nhập</h1>
+
+<form [formGroup]="form" (submit)="onSubmit()">
+  <div>
+    <label for="">Email</label>
+    <input
+      type="email"
+      placeholder="Nhập giá sản phẩm"
+      formControlName="email"
+    />
+  </div>
+  <div>
+    <label for="">Password</label>
+    <input
+      type="password"
+      placeholder="Nhập giá sản phẩm"
+      formControlName="password"
+    />
+  </div>
+
+  <button htmlType="submit" [disabled]="form.invalid">Đăng nhập</button>
+</form>

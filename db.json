@@ -30,5 +30,13 @@
       "price": 0,
       "description": ""
     }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$OH.99YiTWs2kHoMXEokt3uPDej9jsjwsyOGNqJfJj05ZDY0pOxSCW",
+      "username": "admin",
+      "id": 1
+    }
   ]
 }
